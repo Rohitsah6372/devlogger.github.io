@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exchange Rate Calculator</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <img src="image/image2.jpg" alt="" />
+      <h1>Exchange Rate Calculator</h1>
+      <div class="container2" id="container2">
+        <h4>Choose the currency and the amounts to get the exchange rate</h4>
+
+        <div class="firstline" id="firstline">
+          <select name="" id="from" class="from">
+            <option value="USD" selected>USD</option>
+            <option value="IDR">IDR</option>
+            <option value="INR">INR</option>
+            <option value="AMD">AMD</option>
+            <option value="AUD">AUD</option>
+          </select>
+          <input
+            type="number"
+            class="number_from"
+            id="number_from"
+            placeholder="0"
+            value="1"
+          />
+        </div>
+        <button class="swap" id="swap">Swap</button>
+        <span class="rateEl" id="rateEl">Exchange</span>
+        <div class="rate" id="rate"></div>
+        <div class="secondline" id="secondline">
+          <select name="" id="to" class="to">
+            <option value="USD">USD</option>
+            <option value="IDR">IDR</option>
+            <option value="INR">INR</option>
+            <option value="AMD">AMD</option>
+            <option value="AUD">AUD</option>
+          </select>
+          <input
+            type="number"
+            class="number_to"
+            id="number_to"
+            placeholder="0"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

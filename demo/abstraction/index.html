@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 class="" id="content"></h1>
+
+<script >
+//This code is hardcoded or it is tightly coupled
+// var fun = function(){
+//     var total=0
+//     var i=0
+//     while(i<=100){
+//         if(i%5===0){
+//             total += i
+//         }
+//     i++
+//     }
+
+//     document.getElementById('content').innerHTML='This sum of all number divisible by 5 from 1 to 100 : '+total;
+    
+// }
+
+// document.addEventListener('DOMContentLoaded', fun)
+
+
+
+var sum = function(arr){
+    var total =0;   
+    while(arr.length > 0){
+        total +=arr.pop()
+    }
+
+    return total
+   
+}
+
+var findMultiple =function(start, end, multiple){
+    var res = []
+
+    while(start <= end){
+        if(start % multiple === 0){
+            res.push(start)
+        }
+        start++
+    }
+
+    return res;
+
+}
+
+
+document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('content').innerHTML='This sum of all number divisible by 3 from 1 to 100 :'+ sum(findMultiple(1,100,5))
+
+})
+
+    </script>
+</body>
+</html>

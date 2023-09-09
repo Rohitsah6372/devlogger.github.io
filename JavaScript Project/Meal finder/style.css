@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body{
+    background: #2d2013;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+    
+}
+
+
+.container input{
+    width: 250px;
+    height: 30px;
+    padding: 1px;
+    margin: 5px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 4px solid #999;
+    font-weight: bold;
+
+}
+
+.container button{
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    margin-left: 5px;
+    border-radius: 6px;
+    box-shadow: 4px solid #999;
+    cursor: pointer;
+  
+}
+
+
+.search-btn{
+    background: rgb(156, 232, 156);
+}
+
+.random-btn{
+    background: rgb(212, 224, 81);
+}
+
+
+.result-heading{
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 12px;
+
+
+}
+
+.meals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    grid-column-gap: 20px;
+    margin-top: 20px;
+
+
+}
+
+.meal {
+    cursor: pointer;
+    position: relative;
+    height: 180px;
+    width: 180px;
+    padding-right: 140px;
+    text-align: center;
+
+
+    margin-bottom: 20px;
+    margin-left: 44px;
+    margin-right: 40px;
+}
+
+
+.meal img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: 4px #fff solid;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    position: relative;
+
+}
+
+
+.meal-info {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 104%;
+    width: 59%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+}
+
+
+.meal-info:hover{
+    opacity: 1;
+} 
+

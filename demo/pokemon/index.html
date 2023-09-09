@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img id="pokemon_image" src="`" alt="">
+        <div class="pokemon" id="name"></div>
+        <div class="pokemon" id="height"></div>
+        <div class="pokemon" id="eye_color"></div>
+        <button class="clicked">Click for change</button>
+    </div>
+
+    <script>
+        // Select the HTML elements
+        const nameElement = document.getElementById("name");
+        const heightElement = document.getElementById('height');
+        const eyeColorElement = document.getElementById('eye_color');
+        const pokemon_image = document.getElementById('pokemon_image')
+
+
+        // Select the button and add a click event listener
+        document.querySelector('.clicked').addEventListener('click', (e) => {
+            e.preventDefault();  // Prevent from refreshing
+
+            const randomNumber = Math.ceil(Math.random() * 83);
+            console.log(`Random number is ${randomNumber}`);
+
+            fetch(`https://swapi.dev/api/people/${randomNumber}/`)
+                .then(response => response.json())
+                .then(data => {
+                    // Update the HTML elements with the retrieved data
+                    nameElement.innerHTML= data['name'];
+                    heightElement.innerHTML = data.height;
+                    eyeColorElement.innerHTML = data.eye_color;
+                    pokemon_image.innerHTML = data.image;
+
+                    console.log(data.name);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Reset some default styles */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1d1d1d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.draggable-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.draggable-list li {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fade-in 0.5s ease-out;
+}
+
+.number {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.draggable {
+  display: flex;
+  align-items: center;
+  cursor: grab;
+}
+
+.person-name {
+    width: 300px;
+  margin: 0;
+  padding: 2px;
+  font-size: 16px;
+}
+
+.person-name.wrong{
+    color: red;
+}
+
+.person-name.right{
+    color: greenyellow;
+}
+
+.fa-grip-lines {
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.check-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.check-btn:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
