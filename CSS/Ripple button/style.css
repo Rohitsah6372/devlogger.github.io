@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+/* body{
+    background-color: azure;
+    position: relative;
+} */
+
+
+.container{
+    width: 100%;
+    height:100vh;
+    background-color:#262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn{
+    width: 18rem;
+    height: 18rem;
+    background-color: #9b0e0e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem dotted #fff;
+}
+
+
+.btn span{
+    text-decoration: solid;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+
+
+.ripple{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e7be08;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}

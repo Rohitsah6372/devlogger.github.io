@@ -1,0 +1,39 @@
+.container{
+    width: 400px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #151315;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+img {
+    position: absolute;
+    cursor: pointer;
+    width: 70px;
+    left: 310px;
+    top: 170px;
+    border-radius: 50%;
+}
+
+.userLogin {
+    position: absolute;
+    left: 116px;
+    padding: 5px;
+    font-weight: bolder;
+    font-size: larger;
+    color: #fff;
+}
+
+.link {
+    position: absolute;
+    left: 287px;
+    top: 68px;
+    font-weight: bolder;
+}
